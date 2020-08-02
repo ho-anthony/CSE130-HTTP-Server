@@ -1,0 +1,21 @@
+stages:
+  - build
+  - test
+
+minimum:
+  stage: build
+  tags:
+    - clang7
+  script:
+    - curl -OLs https://teaching.ethanmiller.org/gitlab-testing/check_submission && python3 check_submission https://teaching.ethanmiller.org/cse130/fall19-02/check_submissions.toml
+  artifacts:
+    expire_in: 1 week
+
+functional_test:
+  stage: test
+  tags:
+    - clang7
+  script:
+    - curl -OLs https://teaching.ethanmiller.org/gitlab-testing/check_submission && python3 check_submission https://teaching.ethanmiller.org/cse130/fall19-02/check_submissions.toml test
+  when:  manual
+

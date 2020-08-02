@@ -1,0 +1,31 @@
+# Generated files
+*.o
+*.d
+*.pyc
+a.out
+
+# Backups
+*~
+*.bak
+
+# Archives and compressed files
+*.zip
+*.jar
+*.class
+*.tgz
+*.tar
+*.gz
+
+# C++ files must end in .cpp!
+*.cc
+*.c++
+
+# Java is evil!  If you want helper code, write it in Python or Go.
+*.java
+
+# Latex is good, but no intermediate files!
+*.log
+*.out
+*.dvi
+*.bbl
+*.blg
